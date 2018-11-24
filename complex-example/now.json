@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "builds": [
+        { "src": "www/package.json", "use": "@now/next" },
+        { "src": "api/message/*.js", "use": "@now/node-server" },
+        { "src": "api/auth/*.js", "use": "@now/node" },
+        { "src": "api/channels/*.js", "use": "@now/node" }
+    ],
+    "routes": [
+        { "src": "/api/(.*)", "dest": "/api/$1" },
+        { "src": "/(.*)", "dest": "/www/$1" }
+    ],
+    "env": {
+        "CLIENT_ID": "@client-id",
+        "CLIENT_SECRET": "@client-secret"
+    },
+    "alias": "arqui-serverless-slack"
+}

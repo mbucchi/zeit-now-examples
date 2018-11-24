@@ -1,0 +1,8 @@
+{
+    "name": "complex-example-api",
+    "license": "MIT",
+    "dependencies": {
+        "@slack/client": "^4.8.0",
+        "url": "^0.11.0"
+    }
+}
